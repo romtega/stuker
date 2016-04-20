@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  sheduled_at: 2016-04-20 12:47:23
+  state: MyString
+  user_id: 1
+  facebook: false
+  twitter: false
+
+two:
+  content: MyText
+  sheduled_at: 2016-04-20 12:47:23
+  state: MyString
+  user_id: 1
+  facebook: false
+  twitter: false
