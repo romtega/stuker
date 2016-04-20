@@ -57,6 +57,8 @@ gem 'dotenv-rails', groups: [:development]
 
 gem 'omniauth-twitter'
 
+gem 'omniauth-facebook'
+
 
 
 
