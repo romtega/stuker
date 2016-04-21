@@ -3,15 +3,21 @@ Rails.application.routes.draw do
   authenticated :user, -> user { user.admin? } do
   mount Delayed::Web::Engine, at: '/jobs'
   end
+
   get 'auth/:provider/callback', to: 'connections#create'
   resources :connections, only: [:destroy]
-  resources :posts
-
   get 'auth/failure', to: 'connections#omniauth_failure'
 
   devise_for :users, controllers: {registrations: 'registrations'}
   root 'pages#home'
   get 'dashboard', to: "pages#dashboard"
+
+    resources :posts do
+      member do
+        put :cancel
+      end
+  end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
